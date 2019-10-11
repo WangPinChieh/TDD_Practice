@@ -4,7 +4,7 @@ using System.Text;
 
 namespace ConsoleApp1
 {
-	public class FizzBuzz
+	public class FizzBuzz : IFizzBuzz
 	{
 		public string ProcessNumber(int i)
 		{
@@ -29,5 +29,11 @@ namespace ConsoleApp1
 
 			return result;
 		}
+	}
+
+	public interface IFizzBuzz
+	{
+		string ProcessNumber(int i);
+		List<string> Execute(List<int> input);
 	}
 }

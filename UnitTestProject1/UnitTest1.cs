@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using ConsoleApp1;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NSubstitute;
 
 namespace UnitTestProject1
 {

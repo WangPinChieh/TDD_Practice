@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ConsoleApp1
 {
@@ -6,7 +7,14 @@ namespace ConsoleApp1
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello World!");
+			var serviceCollection = new ServiceCollection();
+			var buildServiceProvider = serviceCollection
+				.AddSingleton<IFizzBuzz, FizzBuzz>()
+				.BuildServiceProvider();
+			var processNumber = buildServiceProvider.GetService<IFizzBuzz>().ProcessNumber(1);
+
+			Console.WriteLine("Hello World!" + processNumber);
+			Console.ReadLine();
 		}
 	}
 }
