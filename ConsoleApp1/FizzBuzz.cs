@@ -10,7 +10,8 @@ namespace ConsoleApp1
 		{
 			if (i == 3)
 				return "Fizz";
-
+			if (i == 5)
+				return "Buzz";
 			return i.ToString();
 		}
 	}
