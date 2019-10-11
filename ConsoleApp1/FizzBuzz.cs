@@ -8,11 +8,15 @@ namespace ConsoleApp1
 	{
 		public string processNumber(int i)
 		{
+			var result = string.Empty;
 			if (i % 3 == 0)
-				return "Fizz";
+				result += "Fizz";
 			if (i % 5 == 0)
-				return "Buzz";
-			return i.ToString();
+				result += "Buzz";
+			if (string.IsNullOrEmpty(result))
+				result += i.ToString();
+
+			return result;
 		}
 	}
 }

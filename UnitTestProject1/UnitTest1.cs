@@ -41,5 +41,11 @@ namespace UnitTestProject1
 		{
 			Assert.AreEqual("Buzz", new FizzBuzz().processNumber(10));
 		}
+
+		[TestMethod]
+		public void ShouldProcessInput_15()
+		{
+			Assert.AreEqual("FizzBuzz", new FizzBuzz().processNumber(15));
+		}
 	}
 }
