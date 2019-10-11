@@ -8,6 +8,9 @@ namespace ConsoleApp1
 	{
 		public string processNumber(int i)
 		{
+			if (i == 3)
+				return "Fizz";
+
 			return i.ToString();
 		}
 	}
