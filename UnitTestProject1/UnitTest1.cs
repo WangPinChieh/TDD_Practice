@@ -7,11 +7,15 @@ namespace UnitTestProject1
 	public class UnitTest1
 	{
 		[TestMethod]
-		public void ShouldProcessInput()
+		public void ShouldProcessInput_1()
 		{
-			var processNumber = new FizzBuzz().processNumber(1);
-			Assert.AreEqual("1", processNumber);
+			Assert.AreEqual("1", new FizzBuzz().processNumber(1));
+		}
 
+		[TestMethod]
+		public void ShouldProcessInput_2()
+		{
+			Assert.AreEqual("2", new FizzBuzz().processNumber(2));
 		}
 	}
 }
